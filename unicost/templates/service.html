@@ -1,0 +1,133 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<section class="hero-section hero-section-full-height">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-12 col-12 p-0">
+                <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/static/images/constructions/construction5.jpg" class="carousel-image img-fluid" alt="...">
+                            
+                            
+                           
+                        </div>
+
+                      
+
+                    </div>
+
+                  
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section-padding" id="section_3">
+    <div class="container">
+        <div class="col-lg-12 col-12 text-center mb-4">
+            <h2>What We Do</h2>
+
+            <p>At Unicost Investment Limited , we provide reliable and future-ready technology solutions designed to keep your business connected, secure, and visible. Whether you're building your digital presence or upgrading your infrastructure, our expert team delivers professional service with a focus on innovation and performance.</p>
+        </div>
+        <br><br>
+
+        <div class="container-fluid bg-danger mb-2 wow fadeIn" data-wow-delay="0.1s" style="padding: 2px">
+            <div class="container">
+              <div class="row g-2">
+                <div class="col-md-10">
+                  <div class="row g-2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+
+    
+       
+    </div>
+</section>
+<section class="" >
+    <div class="container">
+    
+
+          <div class="col-lg-12 col-12 text-center mb-4">
+            <h5>We specialize in: </h5>
+
+            <p> At <strong>Unicost Investment Limited </strong>, we provide reliable and future-ready technology solutions designed to keep your business connected, secure, and visible. Whether you're building your digital presence or upgrading your infrastructure, our expert team delivers professional service with a focus on innovation and performance.</p>
+        </div>
+
+
+
+        <div class="row">
+           
+            {% for image in images %}
+            
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block-wrap">
+                    <a href="{% url 'image_detail' image.id %}" class="custom-block-image img-fluid">                  
+                        <img src="{{ image.image.url }}" class="custom-block-image img-fluid equal-size" alt="{{ image.title }}">
+                    </a>
+
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3 text-muted">{{ image.title }}</h5>
+                            <p>{{ image.description }}</p>
+                        </div>
+
+                        <a href="{% url 'image_detail' image.id %}" class="custom-btn btn">Details And Gallery</a>
+                       
+                    </div>
+                   
+                </div>
+                
+            </div>
+
+            
+            {% endfor %}
+
+            <!-- <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block-wrap">
+                    <img src="/static/images/clients/accessories.webp" class="custom-block-image img-fluid" alt="">
+    
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3 text-muted">Our Products</h5>  
+    
+                            <p>Let Unicost Investment Limited  be your go-to shop for affordable tech solutions that keep your world moving.
+    
+                            </p>
+    
+                           
+    
+                   
+                        </div>
+    
+                        <a href="{% url 'products' %}" class="custom-btn btn">Details And Gallery</a>
+                    </div>
+                </div>
+            </div> -->
+        </div> <!-- Close the row here -->
+
+        
+
+    </div> 
+
+
+</section>
+<br><br>
+<style>
+    .equal-size {
+        width: 100%; /* Ensure the images take full width of the column */
+        height: 200px; /* Set a fixed height */
+        object-fit: cover; /* Ensures images cover the area without distorting their aspect ratio */
+    }
+</style>
+
+
+ {% endblock %}
+
+

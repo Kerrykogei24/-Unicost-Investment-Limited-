@@ -1,0 +1,174 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<section class="hero-section hero-section-full-height">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-12 col-12 p-0">
+                <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/static/images/constructions/contructions 4.jpg" class="carousel-image img-fluid" alt="...">
+                            
+                            
+                           
+                        </div>
+
+                      
+
+                    </div>
+
+                  
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="contact-section section-padding py-5" id="section_6">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-4 col-12 ms-auto mb-4 mb-lg-0">
+                <div class="contact-info-wrap">
+                    <h2>Get in touch</h2>
+
+                    <div class="contact-image-wrap d-flex flex-wrap">
+                        <img src="/static/images/kerry/ceo1.jpg" class="img-fluid avatar-image" alt="">
+
+                        <div class="d-flex flex-column justify-content-center ms-3">
+                            <p class="mb-0">Architect Samuel Sitandi</p>
+                            <p class="mb-0"><strong>Managing Director </strong></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info">
+                        <h5 class="mb-3">Contact Infomation</h5>
+
+                        <p class="d-flex mb-2">
+                            <i class="bi-geo-alt me-2"></i>
+                            P.O Box 28516-00100 Nairobi 
+                            
+                        </p>
+
+                        <p class="d-flex mb-2">
+                            <i class="bi-telephone me-2"></i>
+
+                            <a href="tel: +254706945620">
+                                +254-706-945-620
+                            </a>
+                        </p>
+
+                        <p class="d-flex">
+                            <i class="bi-envelope me-2"></i>
+
+                            <a href="mailto:unicost.builders@gmail.com                            ">
+                                unicost.builders@gmail.com
+                            </a>
+                        </p>
+
+                        <a href="" class="custom-btn btn mt-3" target="_blank">Get Direction</a>
+                    </div>
+
+                 
+
+            
+                </div>
+            </div>
+
+
+
+            
+
+            <div class="col-lg-5 col-12 mx-auto">
+
+
+
+
+    {% load widget_tweaks %}
+<br><br>
+<form method="post" action="{% url 'contact' %}">
+    {% csrf_token %}
+    <h2>Contact form</h2>
+
+    <p class="mb-4">Send A Message:
+        <a href="mailto:unicost.builders@gmail.com">unicost.builders@gmail.com</a>
+    </p>
+
+    
+        
+    {{ form.name|add_class:"form-control" }}
+       <br>
+    
+    
+    {{ form.phone|add_class:"form-control" }}
+    <br>
+    {{ form.email|add_class:"form-control" }}
+    <br>
+    {{ form.subject|add_class:"form-control" }}
+    <br>
+    {{ form.message|add_class:"form-control" }}
+    <br>
+
+    <button type="submit" class="form-control">Send Message</button>
+</form>
+
+                
+                
+            </div>
+
+        </div>
+    </div>
+</section>
+<div class="container-fluid bg-danger mb-2 wow fadeIn" data-wow-delay="0.1s" style="padding: 2px">
+    <div class="container">
+      <div class="row g-2">
+        <div class="col-md-10">
+          <div class="row g-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<section >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-12 ms-auto mb-5 mb-lg-0">
+            
+            </div>
+
+            <div class="col-lg-8 col-12 ms-auto mb-5 mb-lg-0">
+                <div class="contact-info-wrap">
+                    <h5 class="text-center mb-3">We are Located On Map</h5>
+
+               
+
+      
+
+           
+
+                    <div class="ratio ratio-16x9">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48.67236379955627!2d36.79534016268626!3d-1.2951012653434313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10bd3fb8944b%3A0xb6876f2e75092ae8!2sMetropolitan%20Court%2C%20Argwings%20Kodhek%20Rd%2C%20Nairobi%20City!5e1!3m2!1sen!2ske!4v1756568902648!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-12 ms-auto mb-5 mb-lg-0">
+            
+            </div>
+
+
+            
+
+        
+
+        </div>
+    </div>
+    <br><br>
+</section>
+
+{% endblock %}
