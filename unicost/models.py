@@ -35,10 +35,13 @@ class Products(models.Model):
 
 class Gallery(models.Model):  
     image = models.ImageField(upload_to='gallery/')
-    # created_at = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(max_length=100, blank=True, null=True)
+    location = models.CharField(max_length=150, blank=True, null=True)
+    created_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return self.image.name
+        return self.title if self.title else f"Gallery Image {self.id}"
+
     
     
 
