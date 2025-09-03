@@ -1077,6 +1077,74 @@ height: 50px;
 }
 
 
+    /* Styles for the floating buttons container */
+    .floating-buttons-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      z-index: 1000;
+  }
+
+  /* Common styles for all floating buttons */
+  .floating-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      color: white;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      text-decoration: none;
+      animation: pulse 2s infinite ease-in-out;
+  }
+
+  /* Hover effect: lift the button slightly and stop animation */
+  .floating-button:hover, .floating-button:focus {
+      transform: scale(1.1) translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      animation: none;
+  }
+
+  /* WhatsApp button specific styles */
+  .whatsapp-button {
+      background-color: #25D366; /* WhatsApp green */
+  }
+
+  /* Phone button specific styles */
+  .phone-button {
+      background-color: #007bff; /* A nice blue color */
+  }
+
+  /* Icon styling */
+  .floating-button i {
+      font-size: 28px;
+  }
+
+  /* Subtle pulsating animation to grab attention */
+  @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+  }
+
+  /* Demo content to show the button over scrolling text */
+  .demo-content {
+      height: 200vh;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+  }
+
+  .demo-content h1 {
+      color: #333;
+  }
+
 /*---------------------------------------
 CONTACT               
 -----------------------------------------*/
