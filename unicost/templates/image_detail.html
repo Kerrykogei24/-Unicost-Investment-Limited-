@@ -49,8 +49,13 @@
                         <img src="{{detail.detail_image.url}}" class="custom-block-image img-fluid equal-size" alt="{{ detail.title  }}">
 
     
-                        <h6 class="text-muted">{{ image.title }}</h6>
+                       
                     </div>
+                    <br>
+                    <h6 class="text-muted ">{{ detail.title }}</h6>
+                    <p class="text-secondary" style="font-size: small;">
+                        Posted on {{ detail.created_at|date:"M d, Y H:i" }}
+                      </p>
                     <br><br><br>
                 </div>
                 

@@ -49,6 +49,7 @@ class Gallery(models.Model):
 class ImageDetail(models.Model):
     image = models.ForeignKey(Image, on_delete=models.CASCADE, related_name='details')
     title = models.CharField(max_length=100)
+    created_at = models.DateTimeField(default=timezone.now)
     detail_image = models.ImageField(upload_to='detail_images/',null=True)
 
     def __str__(self):
